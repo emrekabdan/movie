@@ -1,0 +1,25 @@
+:root {
+  --primary: #012761;
+  --primaryHover: #003a91;
+  //
+  --siderBg: #000000;
+  --siderMenuBg: #000000;
+  --siderMenuBgHover: #393939;
+  --siderMenuBgSelected: #0c76ca;
+  --siderSubMenuBg: #000000;
+  --siderColor: #ffffff;
+  --siderColorHover: #f9f9f9;
+  --siderMenuColor: #f9f9f9;
+  --siderMenuSelectedColor: white;
+  --siderMenuBorder: #0c76ca;
+  --antLayoutHeader: #000000;
+  --antLayoutHeaderColor: #ffffff;
+  --antLayoutHeaderColorHover: #b7d5ee;
+}
+
+.ant-btn-primary {
+  background-color: var(--primary) !important;
+}
+.ant-btn-primary:hover {
+  background-color: var(--primaryHover) !important;
+}

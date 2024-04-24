@@ -1,0 +1,176 @@
+@font-face {
+  font-family: "Oswald-VariableFont";
+  src: url("/public/assets/font/Oswald-VariableFont_wght.ttf");
+}
+$Oswald: "Oswald-VariableFont";
+@import "antTheme.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $Oswald !important;
+}
+
+.ant-layout {
+  height: 100vh;
+  max-height: 100vh;
+  .ant-layout-header {
+    background-color: var(--antLayoutHeader) !important;
+    color: var(--antLayoutHeaderColor);
+    a,
+    svg {
+      cursor: pointer;
+      color: var(--antLayoutHeaderColor) !important;
+    }
+    a:hover,
+    svg:hover {
+      color: var(--antLayoutHeaderColorHover) !important;
+    }
+    .header {
+      .menuLine {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        .anticon {
+          position: relative;
+          font-size: 20px;
+          top: 3px !important;
+        }
+
+        .line {
+          position: relative;
+          background-color: white;
+          width: 1px;
+          height: 64px;
+        }
+        .dropdown {
+          cursor: pointer;
+        }
+      }
+      .menuCollapsed {
+        margin-left: -50px;
+        height: 64px;
+        border-radius: 0px;
+        position: absolute;
+        z-index: 2;
+        background-color: var(--siderBg);
+      }
+    }
+  }
+  .ant-layout-sider {
+    background-color: var(--siderBg);
+    flex: 0 0 250px !important;
+
+    .sider {
+      .avatar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 64px;
+        background-color: #161616;
+        color: white;
+        img {
+          width: 100%;
+          max-width: 100px;
+        }
+      }
+
+      .siderMenu {
+        border-top: solid 1px var(--siderMenuBorder);
+        // menu
+        .ant-menu-sub > .ant-menu-item {
+          padding-left: 56px !important;
+          margin: 0px !important;
+          height: 30px !important;
+        }
+
+        .ant-menu,
+        .ant-menu-item,
+        .ant-menu-submenu-title {
+          background: var(--siderMenuBg) !important;
+          color: var(--siderMenuColor);
+          width: 100%;
+          margin-inline: 0px !important;
+          margin-block: 0px !important;
+        }
+
+        .ant-menu-submenu-title a {
+          color: var(--siderMenuColor);
+        }
+
+        .ant-menu-sub > .ant-menu-item {
+          background-color: var(--siderSubMenuBg) !important;
+        }
+        .ant-menu-submenu-title:hover,
+        .ant-menu-submenu > li:hover,
+        .ant-menu-item:hover {
+          .ant-menu-item-selected a,
+          a {
+            color: red;
+          }
+          background: var(--siderMenuBgHover) !important;
+          color: var(--siderColorHover);
+        }
+
+        .ant-menu-sub > .ant-menu-item-selected,
+        .ant-menu-item-selected a,
+        .ant-menu-item-selected svg,
+        .ant-menu-submenu-open .ant-menu-item-selected svg,
+        .ant-menu-submenu-open .ant-menu-item-selected:hover svg,
+        .ant-menu-item-selected:hover {
+          color: red !important;
+          //  background: var(--siderMenuBgSelected) !important;
+          // color: var(--siderMenuSelectedColor) !important;
+        }
+
+        .ant-menu-item,
+        .ant-menu-submenu-title,
+        .ant-menu-submenu > li {
+          border-radius: 0px !important;
+        }
+        // menu end
+      }
+    }
+  }
+
+  .ant-layout-content {
+    margin: 15px;
+    width: calc(100% - 30px);
+    overflow: hidden;
+    overflow-y: auto;
+  }
+}
+
+@media only screen and (max-width: 791px) {
+  .ant-layout-sider {
+    position: absolute !important;
+    z-index: 1;
+    opacity: 0.95;
+    height: 100%;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 8px;
+  cursor: pointer;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  cursor: pointer;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #1da1f2;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #4ec6f7;
+  cursor: pointer !important;
+}
