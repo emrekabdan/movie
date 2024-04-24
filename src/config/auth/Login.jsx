@@ -50,7 +50,11 @@ const Login = () => {
               },
             ]}
           >
-            <Input addonBefore="Header" addonAfter={selectAfter} />
+            <Input
+              addonBefore="Header"
+              addonAfter={selectAfter}
+              placeholder="Authorization"
+            />
           </Form.Item>
         </>
       ),
@@ -115,12 +119,12 @@ const Login = () => {
                       }}
                       onClick={() => prev()}
                     >
-                      Geri
+                      GERİ
                     </Button>
                   )}
                   {current < steps.length - 1 && (
                     <Button type="primary" htmlType="submit">
-                      İleri
+                      İLERİ
                     </Button>
                   )}
                   {current === steps.length - 1 && (
@@ -130,7 +134,7 @@ const Login = () => {
                         allow(session.requestToken);
                       }}
                     >
-                      Bitir
+                      ONAYA GÖNDER
                     </Button>
                   )}
                 </div>,
